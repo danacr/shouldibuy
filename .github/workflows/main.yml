@@ -22,4 +22,5 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: build
+          CNAME: eth.mad.md
           BUILD_SCRIPT: npm install && npm run-script build
