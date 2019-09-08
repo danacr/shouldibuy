@@ -42,9 +42,9 @@ function App() {
 
 function Buy(eth) {
   if (eth < price) {
-    return "Buy";
+    return "Buy now!";
   }
-  return "Wait a bit";
+  return "Wait a bit...";
 }
 
 export default App;
