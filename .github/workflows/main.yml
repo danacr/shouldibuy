@@ -16,9 +16,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install, build
-        run: |
-          npm install
-          npm run build
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@master
         env:
-          CI: true
+          ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          BRANCH: live
+          FOLDER: build
+          BUILD_SCRIPT: npm install && npm run-script build
